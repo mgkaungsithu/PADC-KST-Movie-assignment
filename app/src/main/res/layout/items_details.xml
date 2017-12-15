@@ -58,7 +58,7 @@
                     android:backgroundTint="@color/accent"
                     android:fontFamily="cursive"
                     android:gravity="center"
-                    android:text="7.4"
+                    android:text="9.0"
                     android:layout_marginTop="28dp"
                     android:textColor="@color/icons"
                     android:textSize="16sp"
@@ -70,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@id/fl_img"
                     android:layout_toRightOf="@id/fl_img"
-                    android:text="Join the Jaeger Uprising"
+                    android:text="Jungle"
                     android:textColor="@color/white_full"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -168,7 +168,7 @@
                 android:background="@color/rating"
                 android:fontFamily="Franklin Gothic"
                 android:padding="16dp"
-                android:text="Pacific Rim : Uprising"
+                android:text="24hr 1 week"
                 android:textColor="@color/accent"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -198,7 +198,7 @@
                         style="@style/movie_type_style"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Science Fiction" />
+                        android:text="Horror Fiction" />
                 </LinearLayout>
 
             </HorizontalScrollView>
@@ -211,7 +211,7 @@
                 android:layout_marginLeft="8dp"
                 android:background="@drawable/rounded_accent_border"
                 android:padding="8dp"
-                android:text="2 hrs 10 mins"
+                android:text="6 hr"
                 android:textColor="@color/white_full"
                 android:textSize="16sp" />
 
