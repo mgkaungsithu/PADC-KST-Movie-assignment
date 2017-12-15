@@ -1,4 +1,4 @@
-package xyz.kaungsithu.movie;
+package xyz.kaungsithu.movie.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
