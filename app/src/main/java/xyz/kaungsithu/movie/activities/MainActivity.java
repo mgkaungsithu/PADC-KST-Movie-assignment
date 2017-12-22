@@ -1,4 +1,4 @@
-package xyz.zzp.ass_movie.activities.activities.activities;
+package xyz.kaungsithu.movie.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,11 +15,12 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import butterknife.BindView;
+import butterknife.*;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
+import butterknife.*;
 import xyz.kaungsithu.movie.*;
 import xyz.kaungsithu.*;
+import xyz.kaungsithu.movie.R;
 import xyz.kaungsithu.movie.adapters.MoviesAdapter;
 
 public class MainActivity extends AppCompatActivity {
