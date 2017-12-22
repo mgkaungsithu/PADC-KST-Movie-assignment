@@ -20,6 +20,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import xyz.kaungsithu.movie.*;
 import xyz.kaungsithu.*;
+import xyz.kaungsithu.movie.adapters.MoviesAdapter;
 
 public class MainActivity extends AppCompatActivity {
     @BindView(R.id.rv_movie)

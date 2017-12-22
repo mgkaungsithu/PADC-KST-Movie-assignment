@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import android.support.annotation.*;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,10 +13,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Window;
 import android.view.WindowManager;
 
-import butterknife.BindView;
+import butterknife.*;
 import butterknife.ButterKnife;
-import xyz.zzp.ass_movie.R;
-import xyz.zzp.ass_movie.activities.activities.adapters.TrailersAdapter;
+import xyz.kaungsithu.movie.R;
+import xyz.kaungsithu.movie.adapters.TrailersAdapter;
+
 
 /**
  * Created by User on 12/15/2017.
@@ -36,13 +37,13 @@ public class MovieDetailsActivity extends AppCompatActivity {
     }
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.item_details);
+        setContentView(R.layout.items_details);
         ButterKnife.bind(this,this);
 
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-//        actionBar.setDisplayShowTitleEnabled(false);
+       actionBar.setDisplayShowTitleEnabled(false);
 
         TrailersAdapter trailersAdapter = new TrailersAdapter();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false);

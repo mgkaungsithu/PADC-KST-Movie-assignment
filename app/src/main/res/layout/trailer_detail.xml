@@ -12,15 +12,17 @@
         android:textColor="@color/white_full"
         android:textSize="14sp"
         android:layout_gravity="right"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_dummy_trailer" />
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="centerCrop"
-            android:src="@drawable/img_dummy_trailer"/>
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"

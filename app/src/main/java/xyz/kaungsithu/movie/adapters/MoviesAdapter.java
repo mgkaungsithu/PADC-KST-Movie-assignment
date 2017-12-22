@@ -6,8 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import xyz.zzp.ass_movie.R;
-import xyz.zzp.ass_movie.activities.activities.viewholders.ItemMoviesViewHolder;
+import xyz.kaungsithu.movie.R;
+import xyz.kaungsithu.movie.viewsholders.ItemMoviesViewHolder;
+
 
 /**
  * Created by User on 12/15/2017.
@@ -19,7 +20,7 @@ public class MoviesAdapter extends RecyclerView.Adapter {
 
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
-        View movieItemView = inflater.inflate(R.layout.item_movies, parent , false);
+        View movieItemView = inflater.inflate(R.layout.items_details, parent , false);
         ItemMoviesViewHolder itemMoviesViewHolder = new ItemMoviesViewHolder(movieItemView);
         return itemMoviesViewHolder;
     }

@@ -6,8 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import xyz.zzp.ass_movie.R;
-import xyz.zzp.ass_movie.activities.activities.viewholders.ItemTrailersViewHolder;
+import xyz.kaungsithu.movie.R;
+import xyz.kaungsithu.movie.viewsholders.ItemTrailersViewHolder;
+
 
 /**
  * Created by User on 12/15/2017.
@@ -18,7 +19,7 @@ public class TrailersAdapter extends RecyclerView.Adapter {
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         LayoutInflater layoutInflater = LayoutInflater.from(context);
-        View trailerItemview = layoutInflater.inflate(R.layout.item_trailer,parent,false);
+        View trailerItemview = layoutInflater.inflate(R.layout.trailer_detail,parent,false);
         ItemTrailersViewHolder itemTrailersViewHolder = new ItemTrailersViewHolder(trailerItemview);
         return itemTrailersViewHolder;
     }
