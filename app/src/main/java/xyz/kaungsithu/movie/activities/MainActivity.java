@@ -17,11 +17,13 @@ import android.view.MenuItem;
 
 import butterknife.*;
 import butterknife.ButterKnife;
+import butterknife.*;
+import xyz.kaungsithu.movie.*;
+import xyz.kaungsithu.*;
 import xyz.kaungsithu.movie.R;
 import xyz.kaungsithu.movie.adapters.MoviesAdapter;
-import xyz.kaungsithu.movie.delegates.MovieActionDelegate;
 
-public class MainActivity extends AppCompatActivity implements MovieActionDelegate{
+public class MainActivity extends AppCompatActivity {
     @BindView(R.id.rv_movie)
     RecyclerView rvMovie;
 
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements MovieActionDelega
         ButterKnife.bind(this,this);
         setSupportActionBar(toolbar);
 
-        MoviesAdapter moviesAdapter = new MoviesAdapter(this);
+        MoviesAdapter moviesAdapter = new MoviesAdapter();
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(),
                 LinearLayoutManager.VERTICAL,false);
@@ -74,10 +76,5 @@ public class MainActivity extends AppCompatActivity implements MovieActionDelega
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onTapMovieItems() {
-
     }
 }
