@@ -31,17 +31,17 @@ import xyz.kaungsithu.movie.network.responses.GetMoviesResponse;
  */
 
 public class HttpUrlConnectionDataAgent implements NewsDataAgent {
-    private static HttpUrlConnectionDataAgent sObjInstance;
+    private static HttpUrlConnectionDataAgent sObjectInstance;
 
     private HttpUrlConnectionDataAgent(){
 
     }
 
-    public static HttpUrlConnectionDataAgent getObjInstance(){
-        if (sObjInstance==null){
-            sObjInstance=new HttpUrlConnectionDataAgent();
+    public static HttpUrlConnectionDataAgent getObjectInstance(){
+        if (sObjectInstance==null){
+            sObjectInstance=new HttpUrlConnectionDataAgent();
         }
-        return sObjInstance;
+        return sObjectInstance;
     }
 
     /**
@@ -105,9 +105,9 @@ public class HttpUrlConnectionDataAgent implements NewsDataAgent {
 
                     Gson gson = new Gson();
                     GetMoviesResponse getNewsResponse=gson.fromJson(responseString, GetMoviesResponse.class);
-                    Log.d(MovieApp.LOG_TAG,"getNewsResponse new size:"+getNewsResponse.getMmMovie().size());
+                    Log.d(MovieApp.LOG_TAG,"getMovieResponse new size:"+getNewsResponse.getPopularMovies().size());
 
-                    LoadedMovieEvent event=new LoadedMovieEvent(getNewsResponse.getMmMovie());
+                    LoadedMovieEvent event=new LoadedMovieEvent(getNewsResponse.getPopularMovies());
                     EventBus.getDefault().post(event);
 
 

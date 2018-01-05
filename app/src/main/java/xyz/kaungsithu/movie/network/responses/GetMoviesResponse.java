@@ -14,7 +14,7 @@ public class GetMoviesResponse {
     private String message;
     private String apiVersion;
     private String page;
-    private List<PopularMovie> mmMovie;
+    private List<PopularMovie> popularMovies;
 
     public int getCode() {
         return code;
@@ -32,7 +32,7 @@ public class GetMoviesResponse {
         return page;
     }
 
-    public List<PopularMovie> getMmMovie() {
-        return mmMovie;
+    public List<PopularMovie> getPopularMovies() {
+        return popularMovies;
     }
 }

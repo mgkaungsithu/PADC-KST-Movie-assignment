@@ -27,6 +27,7 @@ import butterknife.ButterKnife;
 import xyz.kaungsithu.movie.MovieApp;
 import xyz.kaungsithu.movie.R;
 import xyz.kaungsithu.movie.adapters.MoviesAdapter;
+import xyz.kaungsithu.movie.data.model.MovieModel;
 import xyz.kaungsithu.movie.delegates.MovieActionDelegate;
 import xyz.kaungsithu.movie.event.LoadedMovieEvent;
 
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements MovieActionDelega
                         .setAction("Action", null).show();
             }
         });
+        MovieModel.getObjectInstance().loadMovie();
     }
 
     @Override
@@ -117,6 +119,16 @@ public class MainActivity extends AppCompatActivity implements MovieActionDelega
     public void onTapMovieItems() {
         Intent intent = new Intent(getApplicationContext(), MovieDetailsActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void onTapMovieImage() {
+
+    }
+
+    @Override
+    public void onTapMovieOverView() {
+
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

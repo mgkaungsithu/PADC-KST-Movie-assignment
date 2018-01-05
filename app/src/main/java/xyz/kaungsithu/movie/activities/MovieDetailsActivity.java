@@ -16,6 +16,8 @@ import android.view.WindowManager;
 import butterknife.*;
 import butterknife.ButterKnife;
 import xyz.kaungsithu.movie.R;
+import xyz.kaungsithu.movie.adapters.MovieReviewsAdapter;
+import xyz.kaungsithu.movie.adapters.MovieTypesAdaper;
 import xyz.kaungsithu.movie.adapters.TrailersAdapter;
 
 
@@ -29,12 +31,18 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-//
-//    public static Intent newIntent(Context context)
-//    {
-//        Intent intent = new Intent(context,MainActivity.class);
-//        return intent;
-//    }
+
+    @BindView(R.id.rv_movie_types)
+    RecyclerView rvMovieTypes;
+
+    @BindView(R.id.rv_movie_reviews)
+    RecyclerView rvMovieReviews;
+
+    public static Intent newIntent(Context context)
+    {
+        Intent intent = new Intent(context,MainActivity.class);
+        return intent;
+    }
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.items_details);
@@ -45,7 +53,19 @@ public class MovieDetailsActivity extends AppCompatActivity {
         actionBar.hide();
        actionBar.setDisplayShowTitleEnabled(false);
 
+        MovieTypesAdaper movieTypesAdaper = new MovieTypesAdaper();
+        LinearLayoutManager linearLayoutManagerMovieTypes = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false);
+        rvMovieTypes.setLayoutManager(linearLayoutManagerMovieTypes);
+        rvMovieTypes.setAdapter(movieTypesAdaper);
+
+        MovieReviewsAdapter movieReviewsAdapter = new MovieReviewsAdapter();
+        LinearLayoutManager linearLayoutManagerReview = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false);
+        rvMovieReviews.setLayoutManager(linearLayoutManagerReview);
+        rvMovieReviews.setAdapter(movieReviewsAdapter);
+
+
         TrailersAdapter trailersAdapter = new TrailersAdapter();
+
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(),
                 LinearLayoutManager.HORIZONTAL,false);

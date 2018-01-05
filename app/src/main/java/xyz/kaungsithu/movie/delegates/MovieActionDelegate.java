@@ -7,4 +7,8 @@ package xyz.kaungsithu.movie.delegates;
 public interface MovieActionDelegate {
 
     void onTapMovieItems();
+
+    public void onTapMovieImage();
+
+    public void onTapMovieOverView();
 }

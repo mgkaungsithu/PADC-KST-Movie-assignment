@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import xyz.kaungsithu.movie.R;
@@ -18,19 +19,20 @@ import xyz.kaungsithu.movie.viewsholders.ItemMoviesViewHolder;
  * Created by User on 12/15/2017.
  */
 
-public class MoviesAdapter extends RecyclerView.Adapter {
+public class MoviesAdapter extends RecyclerView.Adapter<ItemMoviesViewHolder> {
 
 
     private MovieActionDelegate mMovieActionDelegate;
-    private static List<PopularMovie> mMovieList;
+    private List<PopularMovie> mMovieList;
 
     public MoviesAdapter(MovieActionDelegate movieActionDelegate) {
         mMovieActionDelegate = movieActionDelegate;
+        mMovieList = new ArrayList<>();
     }
 
 
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ItemMoviesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
@@ -40,8 +42,8 @@ public class MoviesAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-
+    public void onBindViewHolder(ItemMoviesViewHolder holder, int position) {
+        holder.setMovie(mMovieList.get(position));
     }
 
     @Override

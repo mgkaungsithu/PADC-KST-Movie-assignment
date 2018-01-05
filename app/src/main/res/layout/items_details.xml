@@ -176,41 +176,21 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <HorizontalScrollView
-                android:id="@+id/hsv_movie_type"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_movie_types"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_title_text"
-                android:background="@color/accent">
+                android:background="@color/accent"
+                android:scrollbars="horizontal"
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:divider="@drawable/horizontal_divider"
-                    android:dividerPadding="12dp"
-                    android:orientation="horizontal"
-                    android:showDividers="middle">
-
-                    <TextView
-                        style="@style/movie_type_style"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Action" />
-
-                    <TextView
-                        style="@style/movie_type_style"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Science Fiction" />
-                </LinearLayout>
-
-            </HorizontalScrollView>
+                />
 
             <TextView
                 android:id="@+id/tv_movie_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/hsv_movie_type"
+                android:layout_below="@id/rv_movie_types"
                 android:layout_marginLeft="8dp"
                 android:background="@drawable/rounded_accent_border"
                 android:padding="8dp"
@@ -235,18 +215,12 @@
                 android:text="@string/review_title"
                 android:textColor="@color/white_full"
                 android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/tv_movie_reviews"
-                android:layout_width="wrap_content"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_movie_reviews"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_review_title"
-                android:layout_margin="8dp"
-                android:lineSpacingMultiplier="1"
-                android:paddingBottom="16dp"
-                android:text="@string/movie_first_details"
-                android:textColor="@color/white_full"
-                android:textSize="16sp" />
+                android:layout_marginTop="8dp" />
         </RelativeLayout>
     </android.support.v4.widget.NestedScrollView>
 

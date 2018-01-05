@@ -8,19 +8,19 @@ import xyz.kaungsithu.movie.network.NewsDataAgent;
  */
 
 public class MovieModel {
-    private static MovieModel sObjInstance;
+    private static MovieModel sObjectInstance;
 
     private NewsDataAgent mDataAgent;
 
     private MovieModel() {
-        mDataAgent = HttpUrlConnectionDataAgent.getObjInstance();
+        mDataAgent = HttpUrlConnectionDataAgent.getObjectInstance();
     }
 
-    public static MovieModel getObjInstance() {
-        if (sObjInstance == null) {
-            sObjInstance = new MovieModel();
+    public static MovieModel getObjectInstance() {
+        if (sObjectInstance == null) {
+            sObjectInstance = new MovieModel();
         }
-        return sObjInstance;
+        return sObjectInstance;
     }
 
     /**
