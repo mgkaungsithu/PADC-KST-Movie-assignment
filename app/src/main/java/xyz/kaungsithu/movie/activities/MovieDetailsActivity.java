@@ -29,12 +29,12 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-
-    public static Intent newIntent(Context context)
-    {
-        Intent intent = new Intent(context,MovieDetailsActivity.class);
-        return intent;
-    }
+//
+//    public static Intent newIntent(Context context)
+//    {
+//        Intent intent = new Intent(context,MainActivity.class);
+//        return intent;
+//    }
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.items_details);
@@ -46,7 +46,9 @@ public class MovieDetailsActivity extends AppCompatActivity {
        actionBar.setDisplayShowTitleEnabled(false);
 
         TrailersAdapter trailersAdapter = new TrailersAdapter();
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false);
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(),
+                LinearLayoutManager.HORIZONTAL,false);
         rvMovieTrailer.setLayoutManager(linearLayoutManager);
         rvMovieTrailer.setAdapter(trailersAdapter);
 

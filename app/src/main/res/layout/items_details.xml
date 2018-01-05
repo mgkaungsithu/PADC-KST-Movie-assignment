@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:fitsSystemWindows="true">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
@@ -58,8 +60,9 @@
                     android:backgroundTint="@color/accent"
                     android:fontFamily="cursive"
                     android:gravity="center"
-                    android:text="9.0"
-                    android:layout_marginTop="28dp"
+                    android:text="7.4"
+                    android:layout_marginTop="52dp"
+                    android:layout_marginLeft="22dp"
                     android:textColor="@color/icons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -70,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@id/fl_img"
                     android:layout_toRightOf="@id/fl_img"
-                    android:text="Jungle"
+                    android:text="What is Photoshop"
                     android:textColor="@color/white_full"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -138,7 +141,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"/>
+                app:layout_collapseMode="pin" />
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
@@ -168,7 +171,7 @@
                 android:background="@color/rating"
                 android:fontFamily="Franklin Gothic"
                 android:padding="16dp"
-                android:text="24hr 1 week"
+                android:text="Photoshop"
                 android:textColor="@color/accent"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -198,7 +201,7 @@
                         style="@style/movie_type_style"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Horror Fiction" />
+                        android:text="Science Fiction" />
                 </LinearLayout>
 
             </HorizontalScrollView>
@@ -211,13 +214,13 @@
                 android:layout_marginLeft="8dp"
                 android:background="@drawable/rounded_accent_border"
                 android:padding="8dp"
-                android:text="6 hr"
+                android:text="3 hr 30 min"
                 android:textColor="@color/white_full"
                 android:textSize="16sp" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv_movie_trailer"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_movie_time"
                 android:layout_marginTop="4dp" />
@@ -247,5 +250,4 @@
         </RelativeLayout>
     </android.support.v4.widget.NestedScrollView>
 
-
-</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

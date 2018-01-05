@@ -6,7 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.List;
+
 import xyz.kaungsithu.movie.R;
+import xyz.kaungsithu.movie.data.vo.PopularMovie;
+import xyz.kaungsithu.movie.delegates.MovieActionDelegate;
 import xyz.kaungsithu.movie.viewsholders.ItemMoviesViewHolder;
 
 
@@ -15,13 +19,23 @@ import xyz.kaungsithu.movie.viewsholders.ItemMoviesViewHolder;
  */
 
 public class MoviesAdapter extends RecyclerView.Adapter {
+
+
+    private MovieActionDelegate mMovieActionDelegate;
+    private static List<PopularMovie> mMovieList;
+
+    public MoviesAdapter(MovieActionDelegate movieActionDelegate) {
+        mMovieActionDelegate = movieActionDelegate;
+    }
+
+
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
-        View movieItemView = inflater.inflate(R.layout.items_details, parent , false);
-        ItemMoviesViewHolder itemMoviesViewHolder = new ItemMoviesViewHolder(movieItemView);
+        View movieItemView = inflater.inflate(R.layout.movie_details, parent , false);
+        ItemMoviesViewHolder itemMoviesViewHolder = new ItemMoviesViewHolder(movieItemView,mMovieActionDelegate);
         return itemMoviesViewHolder;
     }
 
@@ -32,6 +46,10 @@ public class MoviesAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return 16;
+        return mMovieList.size();
+    }
+    public void setMovie(List<PopularMovie> movieList){
+        mMovieList=movieList;
+        notifyDataSetChanged();
     }
 }
